@@ -14,8 +14,8 @@ import javax.ws.rs.ext.RuntimeDelegate;
 
 import org.apache.cxf.bus.spring.SpringBus;
 import org.apache.cxf.endpoint.Server;
+import org.apache.cxf.ext.logging.LoggingFeature;
 import org.apache.cxf.feature.Feature;
-import org.apache.cxf.feature.LoggingFeature;
 import org.apache.cxf.interceptor.Interceptor;
 import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
 import org.apache.cxf.jaxrs.swagger.Swagger2Feature;
@@ -38,14 +38,14 @@ import io.nflow.engine.config.NFlow;
 import io.nflow.jetty.mapper.BadRequestExceptionMapper;
 import io.nflow.jetty.mapper.CustomValidationExceptionMapper;
 import io.nflow.jetty.mapper.NotFoundExceptionMapper;
-import io.nflow.rest.config.CorsHeaderContainerResponseFilter;
-import io.nflow.rest.config.DateTimeParamConverterProvider;
 import io.nflow.rest.config.RestConfiguration;
-import io.nflow.rest.v1.ArchiveResource;
-import io.nflow.rest.v1.StatisticsResource;
-import io.nflow.rest.v1.WorkflowDefinitionResource;
-import io.nflow.rest.v1.WorkflowExecutorResource;
-import io.nflow.rest.v1.WorkflowInstanceResource;
+import io.nflow.rest.config.jaxrs.CorsHeaderContainerResponseFilter;
+import io.nflow.rest.config.jaxrs.DateTimeParamConverterProvider;
+import io.nflow.rest.v1.jaxrs.ArchiveResource;
+import io.nflow.rest.v1.jaxrs.StatisticsResource;
+import io.nflow.rest.v1.jaxrs.WorkflowDefinitionResource;
+import io.nflow.rest.v1.jaxrs.WorkflowExecutorResource;
+import io.nflow.rest.v1.jaxrs.WorkflowInstanceResource;
 
 @Configuration
 @ComponentScan("io.nflow.jetty")
